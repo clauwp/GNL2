@@ -161,6 +161,7 @@ char	*ft_newbuf(int fd)
 
 	buf = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 	byte = read(fd, buf, BUFFER_SIZE);
+	//printf("byte= %d\n",byte);
 	if (byte <= 0)
 	{
 		free(buf);
@@ -176,6 +177,7 @@ char	*ft_newbuf(int fd)
 		i++;
 	}
 	retstr[i] = 0;
+	//printf("retstr= %s", retstr);
 	free(buf);
 	return (retstr);
 }
